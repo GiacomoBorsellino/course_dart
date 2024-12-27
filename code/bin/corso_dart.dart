@@ -26,16 +26,29 @@ void main(List<String> arguments) {
 
   // const prova2 = 8;
 
-  final a = [1, 2, 3];
-  a.add(4);
-  print(a);
+  // final a = [1, 2, 3];
+  // a.add(4);
+  // print(a);
 
-  const b = [1, 2, 3];
-  b.add(4);
-  print(b);
+  // const b = [1, 2, 3];
+  // b.add(4);
+  // print(b);
 
-  int x = 6;
-  int y = 8;
+  // int x = 6;
+  // int y = 8;
 
-  print(x + y);
+  // print(x + y);
+
+  int? prova = 0;
+  double ops = 5.5;
+  num popa = 5.5;
+  String obs = 'aaa';
+  bool aba = true;
+
+  List lista = [1, 2, 3];
+  Set sett = {1, 2, 3};
+  Map maps = {'nome': "Luca", 'cognome': "Rossi"};
+
+  Runes runa = new Runes('\u{1f605}');
+  // print(new String.fromCharCodes(runa));
 }
