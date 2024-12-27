@@ -168,6 +168,6 @@ Feel free to contribute to this repository by adding more examples, clarificatio
 
 A sample command-line application with an entrypoint in `bin/`, library code
 in `lib/`, and example unit test in `test/`.
-
+nota
 https://www.recraft.ai/
 https://temp-mail.org/
