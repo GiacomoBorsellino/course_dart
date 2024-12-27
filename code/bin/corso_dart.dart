@@ -1,41 +1,6 @@
 // import 'package:corso_dart/corso_dart.dart' as corso_dart;
 
 void main(List<String> arguments) {
-  // num numero = 6.6;
-  // int intero = 0;
-  // double decimale = 1.1;
-
-  // print("ciao " + numero.toString());
-
-  // String stringa = '5';
-  // print(double.parse(stringa));
-
-  // double qwerty = 6.6;
-
-  // print(qwerty.ceil());
-  // print(qwerty.round());
-  // print(qwerty.floor());
-
-  // int numero = 10;
-  // int intero = 5;
-  // print(numero ~/ intero);
-
-  // int intero = 5;
-  // intero = intero + 5;
-  // intero += 5;
-  // print(intero);
-
-  // int intero = 5;
-  // // intero++;
-  // ++intero;
-  // print(intero);
-
-  int intero = 8;
-
-  int qw = intero++;
-
-  print(qw);
-
   // print('Hello world: ${corso_dart.calculate()}!');
 }
 
@@ -88,3 +53,38 @@ void main(List<String> arguments) {
 
   // Runes runa = new Runes('\u{1f605}');
   // print(new String.fromCharCodes(runa));
+
+  // num numero = 6.6;
+  // int intero = 0;
+  // double decimale = 1.1;
+
+  // print("ciao " + numero.toString());
+
+  // String stringa = '5';
+  // print(double.parse(stringa));
+
+  // double qwerty = 6.6;
+
+  // print(qwerty.ceil());
+  // print(qwerty.round());
+  // print(qwerty.floor());
+
+  // int numero = 10;
+  // int intero = 5;
+  // print(numero ~/ intero);
+
+  // int intero = 5;
+  // intero = intero + 5;
+  // intero += 5;
+  // print(intero);
+
+  // int intero = 5;
+  // // intero++;
+  // ++intero;
+  // print(intero);
+
+  // int intero = 8;
+
+  // int qw = intero++;
+
+  // print(qw);
