@@ -2,6 +2,32 @@
 
 void main(List<String> arguments) {
   // print('Hello world: ${corso_dart.calculate()}!');
+
+  // List<int> testListNumeri = [1, 2, 3];
+
+  // List<Object> testListOggetti = [1, 2, 3, '', true, null];
+
+  // List<int> a = [1, 2, 3];
+  // List<int> b = [1, 2, 3, null];
+  // List<int?> c = [1, 2, 3, null];
+  // List<int>? d;
+
+  // print(a);
+  // print(b);
+  // print(c);
+  // print(d);
+
+  List<int> lista = [2, 4, 6, 8];
+  List<int> lista2 = [1, 3, 5, 7, ...lista];
+
+  print(lista2); // [1, 3, 5, 7, 2, 4, 6, 8]
+
+  // lista.add(100);
+  // lista.addAll(lista2);
+
+  // print(lista[0]);
+  // print(lista.length);
+  // print(lista[lista.length - 1]);
 }
 
  // int intero;
@@ -128,3 +154,14 @@ void main(List<String> arguments) {
   // print(formatString4); // sono una stringa    
   // print(formatString5); // [Sono, una, stringa]
   // print(formatString6); // ono una stringa     
+
+// Booleans
+  // bool booleano = false;
+  // int intero = 5;
+
+  // if (intero < 3) {
+  //   print('è maggiore');
+  // } else {
+  //   print('è minore');
+  // }
+  // print(booleano);
