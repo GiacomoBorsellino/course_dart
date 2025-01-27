@@ -88,3 +88,43 @@ void main(List<String> arguments) {
   // int qw = intero++;
 
   // print(qw);
+
+  // Stringhe ---
+  // String string1 = 'test';
+  // String string2 = "test2";
+  // String string3 = 'l\'amore';
+  // String string4 = 'Ciao, sono in classe ';
+  // String string5 = 'Ciao,\n mi trovo bene';
+  // String string6 = '''ciao
+  // come
+  // va
+  // ?''';
+  // int classe = 5;
+  // String string7 = r'Ciao,\n mi trovo bene';
+
+  // print(string1.length);
+  // print(string2[1]);
+  // print(string3);
+  // print(string1 + string2);
+  // print("${string4}${classe}");
+  // print(string5);
+  // print(string6);
+  // print(string7);
+
+  // String testing = "Sono una stringa";
+
+  // dynamic formatString0 = testing.contains('w');
+  // dynamic formatString1 = testing.indexOf('o');
+  // dynamic formatString2 = testing.lastIndexOf('o');
+  // dynamic formatString3 = testing.toUpperCase();
+  // dynamic formatString4 = testing.toLowerCase();
+  // dynamic formatString5 = testing.split(' ');
+  // dynamic formatString6 = testing.substring(1);
+
+  // print(formatString0); // false
+  // print(formatString1); // 1
+  // print(formatString2); // 3
+  // print(formatString3); // SONO UNA STRINGA    
+  // print(formatString4); // sono una stringa    
+  // print(formatString5); // [Sono, una, stringa]
+  // print(formatString6); // ono una stringa     
