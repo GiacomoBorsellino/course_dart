@@ -3,31 +3,31 @@
 void main(List<String> arguments) {
   // print('Hello world: ${corso_dart.calculate()}!');
 
-  // List<int> testListNumeri = [1, 2, 3];
+  // var list = [1, 2, 3, 4, 5, 6, 6, 8, 8];
 
-  // List<Object> testListOggetti = [1, 2, 3, '', true, null];
+  // var set = {1, 1, 2, 3, 4, 5, 6, 7, 8, 8};
 
-  // List<int> a = [1, 2, 3];
-  // List<int> b = [1, 2, 3, null];
-  // List<int?> c = [1, 2, 3, null];
-  // List<int>? d;
+  // print(list);
+  // print(set);
+  // print(set[3]);
 
-  // print(a);
-  // print(b);
-  // print(c);
-  // print(d);
+  // var set1 = Set();
+  // Set<String> set2 = {"ciao", "hello"};
+  // var set3 = {"ciao", "hello"};
+  // var set4 = <int>{1, 2};
 
-  List<int> lista = [2, 4, 6, 8];
-  List<int> lista2 = [1, 3, 5, 7, ...lista];
+  // print(set1); // {}
+  // print(set2); // {ciao, hello}
+  // print(set3); // {ciao, hello}
+  // print(set4); // {1}
 
-  print(lista2); // [1, 3, 5, 7, 2, 4, 6, 8]
-
-  // lista.add(100);
-  // lista.addAll(lista2);
-
-  // print(lista[0]);
-  // print(lista.length);
-  // print(lista[lista.length - 1]);
+  // set.add(7);
+  // set.intersection(set2);
+  var set = <int>{1, 2, 3, 4, 5, 6};
+  var set2 = <int>{2, 88, 101};
+  print(set.intersection(set2)); // {2}
+  print(set.union(set2)); // {1, 2, 3, 4, 5, 6, 88, 101}
+  print(set.difference(set2)); // {1, 3, 4, 5, 6}
 }
 
  // int intero;
@@ -165,3 +165,59 @@ void main(List<String> arguments) {
   //   print('è minore');
   // }
   // print(booleano);
+
+  // Liste
+  // List<int> testListNumeri = [1, 2, 3];
+
+  // List<Object> testListOggetti = [1, 2, 3, '', true, null];
+
+  // List<int> a = [1, 2, 3];
+  // List<int> b = [1, 2, 3, null];
+  // List<int?> c = [1, 2, 3, null];
+  // List<int>? d;
+
+  // print(a);
+  // print(b);
+  // print(c);
+  // print(d);
+
+  // List<int> lista = [2, 4, 6, 8];
+  // List<int> lista2 = [1, 3, 5, 7, ...lista];
+  // List<int> list3 = [1, 2, 3]
+  //   ..add(8)
+  //   ..add(8);
+  // List<int> list4 = [1, 2, 3];
+  // list4.remove(4);
+  // list4.clear();
+
+  // list4.forEach((x) => print(x * 2));
+
+  // print(list4.indexOf(2));
+  // print(lista2); // [1, 3, 5, 7, 2, 4, 6, 8]
+  // print(list3);
+  // print(list4);
+
+  // lista.add(100);
+  // lista.addAll(lista2);
+
+  // print(lista[0]);
+  // print(lista.length);
+  // print(lista[lista.length - 1]);
+
+  // int qwerty = 5;
+
+  // List<String> lista = [
+  //   'Agamennone',
+  //   'Penelope',
+  //   'Anassimandro',
+  //   if (qwerty > 5) 'Anna',
+  //   'Ettore'
+  // ];
+
+  // print(lista); // [Agamennone, Penelope, Anassimandro, Ettore]
+
+  // List<int> prova = [1, 2, 3];
+
+  // List<String> lista2 = ['A', 'B', 'C', for (var i in prova) '${i}', 'D'];
+
+  // print(lista2); // [A, B, C, 1, 2, 3, D]
