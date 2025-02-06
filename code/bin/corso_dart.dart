@@ -1,7 +1,9 @@
 // import 'package:corso_dart/corso_dart.dart' as corso_dart;
 // print('Hello world: ${corso_dart.calculate()}!');
 
-void main(List<String> arguments) {}
+void main(List<String> arguments) {
+// --- Ciclo WHILE e DO WHILE
+}
 
 
 // Snippets lezioni precedenti:
@@ -256,3 +258,52 @@ void main(List<String> arguments) {}
 // double calcolaMassa(double peso, double altezza, double iva, double cognome) {
 //   return 5.5;
 // }
+// --- Operatori logici
+// print(5 <= 5);
+// print(5 < 5);
+// print(5 <= 5 && 0 < 1);
+// print(5 <= 5 || 0 < 1);
+// print(5 <= 5 && 2 != 0);
+// print(5 >= 5);
+// print(5 > 5);
+// print(true && true);
+// print(false && true);
+// print(false || true);
+// print(false && false);
+// --- Type TEST
+// var prova = [1, 2, 3];
+// var qwert = prova as List<int>;
+// print(qwert);
+// int test = 5;
+// print(test is int);
+// print(test is! int);
+// dynamic valore = "Hello";
+// // Casting sicuro, perché sappiamo che valore è una String
+// String testo = valore as String;
+// print(testo.toUpperCase()); // HELLO
+// --- IF, Else e espressioni condizionali
+// if (3 < 2) {
+//   print('3 < 2');
+// } else if (3 > 2) {
+//   print('3 > 2');
+// } else {
+//   print('vero');
+// }
+// var numero = 2;
+// if (numero < 3) {
+//   print('minore di 3');
+// } else if (numero == 3) {
+//   print('uguale di 3');
+// } else {
+//   print('maggiore di 3');
+// }
+// numero.isOdd ? print('è dispari') : print('è pari');
+// --- Il ciclo FOR, FOR IN e FOREACH
+// var lista = ['tonno', 'pane', 'zucchine', 'materiale fissile'];
+// for (var i = 0; i < lista.length; i++) {
+//   print('for - ' + lista[i]);
+// }
+// for (var element in lista) {
+//   print('forIn - ' + element);
+// }
+// lista.forEach((l) => print('forEach - ' + l));
