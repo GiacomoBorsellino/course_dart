@@ -2,7 +2,36 @@
 // print('Hello world: ${corso_dart.calculate()}!');
 
 void main(List<String> arguments) {
-// --- Ciclo WHILE e DO WHILE
+//   var lista = ['banane', 'carote', 'zucchine'];
+
+//   for (var i = 0; i < lista.length; i++) {
+//     if (lista[i] == 'carote') {
+//       print(lista[i]);
+//       break;
+//     } else {
+//       print(lista[i]);
+//       continue;
+//     }
+//   }
+
+  String citta = 'Dublino';
+
+  switch (citta) {
+    case 'Venezia':
+      print('La città è Venezia');
+      break;
+    case 'Milano':
+      print('La città è Milano');
+      break;
+    case 'Dublino':
+      print('La città è Dublino');
+      break;
+    case 'Bibbiena':
+      print('La città è Bibbiena');
+      break;
+    default:
+      print('Non so quale è la città');
+  }
 }
 
 
@@ -307,3 +336,15 @@ void main(List<String> arguments) {
 //   print('forIn - ' + element);
 // }
 // lista.forEach((l) => print('forEach - ' + l));
+// --- Ciclo WHILE e DO WHILE
+//   var lista = ['banane', 'carote', 'zucchine'];
+//   var i = 0;
+//   while (i < lista.length) {
+//     print(lista[i]);
+//     i++;
+//   }
+//   var i = 0;
+//   do {
+//     print(lista[i]);
+//     i++;
+//   } while (i.isOdd);
