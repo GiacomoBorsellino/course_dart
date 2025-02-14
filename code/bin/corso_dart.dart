@@ -2,38 +2,21 @@
 // print('Hello world: ${corso_dart.calculate()}!');
 
 void main(List<String> arguments) {
-//   var lista = ['banane', 'carote', 'zucchine'];
-
-//   for (var i = 0; i < lista.length; i++) {
-//     if (lista[i] == 'carote') {
-//       print(lista[i]);
-//       break;
-//     } else {
-//       print(lista[i]);
-//       continue;
-//     }
-//   }
-
-  String citta = 'Dublino';
-
-  switch (citta) {
-    case 'Venezia':
-      print('La città è Venezia');
-      break;
-    case 'Milano':
-      print('La città è Milano');
-      break;
-    case 'Dublino':
-      print('La città è Dublino');
-      break;
-    case 'Bibbiena':
-      print('La città è Bibbiena');
-      break;
-    default:
-      print('Non so quale è la città');
-  }
+  var user = Persona('Luca');
+  print(user);
 }
 
+class Persona {
+  late String name;
+
+  String sayName() {
+    return 'Ciao, il mio nome è $name';
+  }
+
+  Persona(String name) {
+    this.name = name;
+  }
+}
 
 // Snippets lezioni precedenti:
 // int intero;
@@ -348,3 +331,103 @@ void main(List<String> arguments) {
 //     print(lista[i]);
 //     i++;
 //   } while (i.isOdd);
+// -- Switch case
+//   var lista = ['banane', 'carote', 'zucchine'];
+//   for (var i = 0; i < lista.length; i++) {
+//     if (lista[i] == 'carote') {
+//       print(lista[i]);
+//       break;
+//     } else {
+//       print(lista[i]);
+//       continue;
+//     }
+//   }
+// String citta = 'Dublino';
+// switch (citta) {
+//   case 'Venezia':
+//     print('La città è Venezia');
+//     break;
+//   case 'Milano':
+//     print('La città è Milano');
+//     break;
+//   case 'Dublino':
+//     print('La città è Dublino');
+//     break;
+//   case 'Bibbiena':
+//     print('La città è Bibbiena');
+//     break;
+//   default:
+//     print('Non so quale è la città');
+// }
+// -- Try e Catch e gestione Errori
+  // try {
+  //   int numero = 10 ~/ 0; // divido per zero
+  //   print(numero);
+  // } catch (error) {
+  //   print('l\'errore è $error'); // l'errore è IntegerDivisionByZeroException
+  // }
+  // try {
+  //   int numero = 10 ~/ 0; // divido per zero
+  //   print(numero);
+  // } on IntegerDivisionByZeroException {
+  //   print('Errore, stai dividendo per zero!');
+  // }
+  // try {
+  //   List<int> lista = [1, 2, 3];
+  //   print(lista[5]); // index 5 non esiste
+  // } catch (error, stackTrace) {
+  //   print('Errore: $error');
+  //   print('StackTrace: $stackTrace');
+  // }
+  // try {
+  //   int numero = 10 ~/ 0; // divido per zero
+  // } catch (error) {
+  //   print('Errore: $error');
+  // } finally {
+  //   print('Chiudo set istruzioni');
+  // }
+  // try {
+  //   checkNumero(-5);
+  // } catch (error) {
+  //   print('Errore: $error'); // Errore: Invalid argument(s): Il numero non può essere negativo
+  // }
+// void checkNumero(int numero) {
+//   if (numero < 0) {
+//     throw ArgumentError('Il numero non può essere negativo');
+//   }
+//   print('Numero accettato: $numero');
+// }
+//   try {
+//     // int num = 10 ~/ 0; // divido per zero
+//     // print(num);
+//     throw ErrorePersonalizzato(
+//         'Qualcosa non ha funzionato'); // il throw ti spara dritto al catch
+//   } catch (error) {
+//     print('Errore $error');
+//   }
+// }
+// class ErrorePersonalizzato implements Exception {
+//   String messaggio;
+//   ErrorePersonalizzato(this.messaggio);
+//   @override
+//   String toString() => 'ErrorePersonalizzato: $messaggio';
+// }
+// }
+// --- OOP
+// class Persona {
+  // var user = Persona();
+  // var user2 = Persona();
+  // print(user);
+  // print(user2);
+  // user2.sayMyName();
+//   String name = 'Agamennone';
+//   String nickname = 'Il distruttore di tonni';
+//   int age = 0;
+//   // constructor(name, age) {
+//   //   this.name = name;
+//   //   this.age = age;
+//   // }
+//   void sayMyName() {
+//     print('Ciao, il mio nome è $name e la mia età è $age');
+//   }
+// }
