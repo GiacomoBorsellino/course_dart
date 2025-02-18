@@ -2,23 +2,50 @@
 // print('Hello world: ${corso_dart.calculate()}!');
 
 void main(List<String> arguments) {
-  var user = Persona('Luca');
-  print(user);
+  // --- Ereditarietà
+  var studente = Studente('Luca', 'Rossi', 'Matematica');
+  print(studente.name);
+  studente.sayMyName();
 }
 
 class Persona {
   late String name;
+  late String surname;
 
-  String sayName() {
-    return 'Ciao, il mio nome è $name';
+  void sayMyName() {
+    print('Ciao, sono $name $surname');
   }
 
-  Persona(String name) {
+  Persona(String name, String surname) {
     this.name = name;
+    this.surname = surname;
   }
 }
 
-// Snippets lezioni precedenti:
+class Studente extends Persona {
+// The superclass 'Persona' doesn't have a zero argument constructor.
+// Try declaring a zero argument constructor in 'Persona', or declaring a constructor in Studente that explicitly invokes a constructor in 'Persona'.
+
+  late String materiaPreferita;
+
+  sayMateriaPreferita() {
+    print('la mia materia preferita è $materiaPreferita');
+  }
+
+  @override
+  sayMyName() {
+    print(
+        'Ciao, sono $name $surname e la mia materia predeferita è $materiaPreferita');
+  }
+
+// Essendo Studente una superClasse di persona, La classe studente eredita i parametri da Persona
+  Studente(String name, String surname, String materiaPreferita)
+      : super(name, surname) {
+    this.materiaPreferita = materiaPreferita;
+  }
+}
+
+// Snippets lezioni precedenti
 // int intero;
 // intero = 6;
 // double decimale = 6.6;
@@ -429,5 +456,70 @@ class Persona {
 //   // }
 //   void sayMyName() {
 //     print('Ciao, il mio nome è $name e la mia età è $age');
+//   }
+// }
+// --- Costruttori Classi
+  // var user = Persona('Luca');
+  // print(user.nameContenitore);
+  // var user2 = Persona2('Agamennone', 'Ons');
+  // print(user2.sayName());
+  // var user3 = Persona2('Zeobaconio', 'Oberan');
+  // print(user3.sayName());
+  // var user4 = Persona3(name: 'Ettore', cognome: 'da Troia');
+  // print(user4.sayName());
+  // var user5 = Persona4.standard();
+  // print(user5.sayName());
+// class Persona {
+//   late String nameContenitore;
+
+//   String sayName() {
+//     return 'Ciao, il mio nome è $nameContenitore';
+//   }
+
+//   Persona(String name) {
+//     // this.nome identifica la variabile nome della classe
+//     // mentre name è il parametro che gli viene passato
+//     nameContenitore = name;
+//   }
+// }
+// class Persona2 {
+//   late String name;
+//   late String cognome;
+
+//   String sayName() {
+//     return 'Ciao, il mio nome è $name e il mio cognome è $cognome';
+//   }
+
+//   Persona2(String name, this.cognome) {
+//     // this.nome identifica la variabile nome della classe, fa riferimento all'istanza
+//     // mentre name è il parametro che viene passato al costruttore
+//     // il this.cognome è reso obbligatorio e quindi non c'è bisogno di esplicitarlo
+//     this.name = name;
+//   }
+// }
+// class Persona3 {
+//   late String name;
+//   late String cognome;
+
+//   String sayName() {
+//     return 'Ciao, il mio nome è $name e il mio cognome è $cognome';
+//   }
+
+//   Persona3(
+//       {required this.name,
+//       required this.cognome}); // resi obligatori e, tramite la sintassi con {} permette di passare oggetti strutturati
+// }
+// class Persona4 {
+//   late String name;
+//   late String cognome;
+
+//   String sayName() {
+//     return 'Ciao, il mio nome è $name e il mio cognome è $cognome';
+//   }
+
+//   Persona4({required this.name, required this.cognome});
+//   Persona4.standard() {
+//     this.name = 'Bob';
+//     this.cognome = 'Aggiustatutto';
 //   }
 // }
