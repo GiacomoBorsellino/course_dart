@@ -1,49 +1,39 @@
 // import 'package:corso_dart/corso_dart.dart' as corso_dart;
 // print('Hello world: ${corso_dart.calculate()}!');
 
-void main(List<String> arguments) {
-  // --- Ereditarietà
-  var studente = Studente('Luca', 'Rossi', 'Matematica');
-  print(studente.name);
-  studente.sayMyName();
+// -- Interfacce
+void main(List<String> arguments) {}
+
+abstract class InterfacciaProva {
+  void connetti();
+  void disconnetti();
 }
 
-class Persona {
-  late String name;
-  late String surname;
-
-  void sayMyName() {
-    print('Ciao, sono $name $surname');
-  }
-
-  Persona(String name, String surname) {
-    this.name = name;
-    this.surname = surname;
-  }
-}
-
-class Studente extends Persona {
-// The superclass 'Persona' doesn't have a zero argument constructor.
-// Try declaring a zero argument constructor in 'Persona', or declaring a constructor in Studente that explicitly invokes a constructor in 'Persona'.
-
-  late String materiaPreferita;
-
-  sayMateriaPreferita() {
-    print('la mia materia preferita è $materiaPreferita');
+class Tesla implements InterfacciaProva {
+  @override
+  void connetti() {
+    // Fa robe
   }
 
   @override
-  sayMyName() {
-    print(
-        'Ciao, sono $name $surname e la mia materia predeferita è $materiaPreferita');
-  }
-
-// Essendo Studente una superClasse di persona, La classe studente eredita i parametri da Persona
-  Studente(String name, String surname, String materiaPreferita)
-      : super(name, surname) {
-    this.materiaPreferita = materiaPreferita;
+  void disconnetti() {
+    // fa altre robe
   }
 }
+
+class Student implements InterfacciaProva {
+  @override
+  void connetti() {
+    // Fa robe
+  }
+
+  @override
+  void disconnetti() {
+    // fa altre robe
+  }
+}
+
+
 
 // Snippets lezioni precedenti
 // int intero;
@@ -471,11 +461,9 @@ class Studente extends Persona {
   // print(user5.sayName());
 // class Persona {
 //   late String nameContenitore;
-
 //   String sayName() {
 //     return 'Ciao, il mio nome è $nameContenitore';
 //   }
-
 //   Persona(String name) {
 //     // this.nome identifica la variabile nome della classe
 //     // mentre name è il parametro che gli viene passato
@@ -485,11 +473,9 @@ class Studente extends Persona {
 // class Persona2 {
 //   late String name;
 //   late String cognome;
-
 //   String sayName() {
 //     return 'Ciao, il mio nome è $name e il mio cognome è $cognome';
 //   }
-
 //   Persona2(String name, this.cognome) {
 //     // this.nome identifica la variabile nome della classe, fa riferimento all'istanza
 //     // mentre name è il parametro che viene passato al costruttore
@@ -500,11 +486,9 @@ class Studente extends Persona {
 // class Persona3 {
 //   late String name;
 //   late String cognome;
-
 //   String sayName() {
 //     return 'Ciao, il mio nome è $name e il mio cognome è $cognome';
 //   }
-
 //   Persona3(
 //       {required this.name,
 //       required this.cognome}); // resi obligatori e, tramite la sintassi con {} permette di passare oggetti strutturati
@@ -512,14 +496,192 @@ class Studente extends Persona {
 // class Persona4 {
 //   late String name;
 //   late String cognome;
-
 //   String sayName() {
 //     return 'Ciao, il mio nome è $name e il mio cognome è $cognome';
 //   }
-
 //   Persona4({required this.name, required this.cognome});
 //   Persona4.standard() {
 //     this.name = 'Bob';
 //     this.cognome = 'Aggiustatutto';
 //   }
 // }
+// --- Ereditarietà
+// void main(List<String> arguments) {
+//   var studente = Studente('Luca', 'Rossi', 'Matematica');
+//   print(studente.name);
+//   studente.sayMyName();
+// }
+// class Persona {
+//   late String name;
+//   late String surname;
+//   void sayMyName() {
+//     print('Ciao, sono $name $surname');
+//   }
+//   Persona(String name, String surname) {
+//     this.name = name;
+//     this.surname = surname;
+//   }
+// }
+// class Studente extends Persona {
+// // The superclass 'Persona' doesn't have a zero argument constructor.
+// // Try declaring a zero argument constructor in 'Persona', or declaring a constructor in Studente that explicitly invokes a constructor in 'Persona'.
+//   late String materiaPreferita;
+//   sayMateriaPreferita() {
+//     print('la mia materia preferita è $materiaPreferita');
+//   }
+//   @override
+//   sayMyName() {
+//     print(
+//         'Ciao, sono $name $surname e la mia materia predeferita è $materiaPreferita');
+//   }
+// // Essendo Studente una superClasse di persona, La classe studente eredita i parametri da Persona
+//   Studente(String name, String surname, String materiaPreferita)
+//       : super(name, surname) {
+//     this.materiaPreferita = materiaPreferita;
+//   }
+// }
+// --- Polimorfismo
+// void main(List<String> arguments) {
+//   // var student = Student('Jaon', 'Pelvis', 'del88');
+//   // student.sayHi();
+//   // Es. nel quale possiamo vedere che una classe figlia può essere inquadrata nell sua super Classe
+//   Persona student2 = Student('Bob', 'Zuck', 'sos66');
+//   student2.sayHi();
+// }
+// class Persona {
+//   late String name;
+//   late String surname;
+//   void sayHi() {
+//     print('Hi, my name is $name');
+//   }
+//   Persona(this.name, this.surname) {
+//     name = name;
+//     surname = surname;
+//   }
+// }
+// class Student extends Persona {
+//   late String matricola;
+//   late String materiaPreferita;
+//   Student(String name, String surname, this.matricola) : super('', '') {
+//     this.name = name;
+//     this.surname = surname;
+//     matricola = matricola;
+//   }
+//   @override
+//   void sayHi() {
+//     print(
+//         'Hi, my name is $name and my surname is $surname, my matricola is $matricola');
+//     super.sayHi(); // derivato direttamente dalla Classe super 'Persona'
+//   }
+// }
+// --- Classi astratte: 
+// ovvero classi che non permettono di creare istanze, ma da cui è possibile estendere altre classi
+// void main(List<String> arguments) {
+//   // var student = Student('Jaon', 'Pelvis', 'del88');
+//   // student.sayHi();
+//   // Es. nel quale possiamo vedere che una classe figlia può essere inquadrata nell sua super Classe
+//   Persona student2 = Student('Bob', 'Zuck', 'sos66');
+//   student2.sayHi();
+//   var student3 = Student('Desmond', 'Lucifer', 'del666');
+//   student3.sayNo();
+// }
+// abstract class Persona {
+//   late String name;
+//   late String surname;
+//   void sayHi() {
+//     print('Hi, my name is $name');
+//   }
+//   void
+//       sayNo(); // <== Un metodo senza corpo richiede una sovrascrittura nelle classi estese
+//   Persona(this.name, this.surname) {
+//     name = name;
+//     surname = surname;
+//   }
+// }
+// class Student extends Persona {
+//   late String matricola;
+//   late String materiaPreferita;
+//   Student(String name, String surname, this.matricola) : super('', '') {
+//     this.name = name;
+//     this.surname = surname;
+//     matricola = matricola;
+//   }
+//   @override
+//   void sayHi() {
+//     print(
+//         'Hi, my name is $name and my surname is $surname, my matricola is $matricola');
+//     super.sayHi(); // derivato direttamente dalla Classe super 'Persona'
+//   }
+//   void sayNo() {
+//     // <== Bisognerà implementare il metodo astratto, sovrascrivento quello padre
+//     print('No from a stundet');
+//   }
+// }
+// -- Interfacce
+// void main(List<String> arguments) {
+//   var veicolo = Automobile();
+//   veicolo.saySound();
+// }
+
+// abstract class Persona {} // Classe Padre
+
+// abstract class InterfacciaProva {} // Interfaccia 1
+
+// abstract class InterfacciaProva2 {} // Interfaccia 2
+
+// class Studente // Classe Figlia di Padre
+//     extends Persona {} // In questo caso viene estesa una classe (persona)
+
+// class InterfacciaFiglia
+//     implements
+//         InterfacciaProva,
+//         InterfacciaProva2 {} // In questo caso possono essere 'implementate' più interfaccie contemporaneamente (InterfacciaProva E InterfacciaProva2)
+
+// abstract class Veicolo {
+//   late Bool accelera;
+//   late Bool frena;
+
+//   saySound() {
+//     print('brum!');
+//   }
+// }
+
+// abstract class Robot {
+//   late Bool cpu;
+//   late Bool gpu;
+
+//   saySound() {
+//     print('Bzzz!');
+//   }
+// }
+
+// class InternetInterface {
+//   late Bool wifi;
+//   late Bool cablata;
+// }
+
+// class Automobile extends Veicolo implements InternetInterface {
+//   @override
+//   late Bool cablata;
+
+//   @override
+//   late Bool wifi;
+
+//   @override
+//   void saySound() {
+//     print('brum auto!');
+//   }
+// }
+
+// class Androide extends Robot implements InternetInterface {
+//   @override
+//   late Bool cablata;
+
+//   @override
+//   late Bool wifi;
+
+//   void saySound() {
+//     print('bzzz andros!');
+//   }
+// }
+
